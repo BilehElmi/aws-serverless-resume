@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: blue; /* Light blue color applied to <h2> elements */
+    font-weight: bold; /* Makes <h2> elements bold */
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+#visitor-count {
+    font-size: 18px;
+    color: darkblue;
+    margin-top: 20px;
+}

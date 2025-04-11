@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Cloud Support Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bileh Elmi</h1>
+        <p>London, UK</p>
+        <p>Email: bilehelmi@hotmail.com | Phone: 078 4979 1294</p>
+    </header>
+
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <p>Motivated and skilled Cloud DevOps Engineer in the making, with hands-on experience gained through the AWS re/Start program. Proficient in designing and implementing cloud solutions through practical projects involving AWS architecture, databases, networking, Linux systems, Python scripting, security best practices, serverless technologies, containers, storage/archiving solutions, and automation tooling. Equipped with industry-relevant skills to drive innovation and deliver scalable cloud solutions in dynamic environments.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Cloud Platforms: Amazon Web Services (AWS)</li>
+            <li>Programming: Python, RESTful APIs, Flask</li>
+            <li>Productivity Suites: Microsoft 365, Google Workspace</li>
+            <li>Learning Management Systems: Moodle, LMS 365, Blackboard, Canvas</li>
+            <li>Customer Support: Problem-solving, ticketing systems</li>
+            <li>Linux/Unix Systems Administration</li>
+        </ul>
+
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <h3>Learning & Development/ICT Trainer</h3>
+        <p>LearnApp Ltd, Remote | Aug 2023 - Present</p>
+        <ul>
+            <li>Design and deliver customized ICT training programs, including cloud technologies.</li>
+            <li>Develop instructional materials and conduct hands-on training sessions on software and digital tools.</li>
+            <li>Assess training needs and create engaging content for various learning platforms.</li>
+            <li>Lead both in-person and remote training sessions, adapting to diverse learning styles.</li>
+        </ul>
+
+        <h3>Employment Advisor</h3>
+        <p>Ingeus UK, Lewisham | 2021 - 2023</p>
+        <ul>
+            <li>Leveraged communication tools to connect with participants and provide job search support.</li>
+            <li>Guided participants through online job boards and digital profiling.</li>
+            <li>Conducted mock interviews and assessment activities using virtual platforms.</li>
+            <li>Met monthly performance targets using data-driven approaches.</li>
+        </ul>
+    </section>
+    	<section id="experience">
+    	<h2>Professional Experience</h2>
+    	<h3>Assistant Manager</h3>
+    	<p>O2 UK | Aug 2019 to July 2021</p>
+    	<ul>
+        	<li>Managed day-to-day operations and ensured excellent customer service delivery.</li>
+        	<li>Supervised and trained team members to achieve sales targets and operational excellence.</li>
+        	<li>Analyzed sales data to identify trends and implement strategies for revenue growth.</li>
+        	<li>Resolved customer complaints efficiently, ensuring high satisfaction levels and loyalty.</li>
+        	<li>Maintained compliance with company policies and procedures while fostering a positive work environment.</li>
+    	</ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>CLI Application for Bookstore:</strong> Developed a Python-based command-line tool to manage book inventory and customer data.</li>
+            <li><strong>RESTful APIs with Flask:</strong> Created APIs showcasing best practices in design and integration with front-end applications.</li>
+            <li><strong>Redis Integration:</strong> Implemented caching strategies to improve application performance using Redis and Python.</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education & Certifications</h2>
+        <p><strong>BSc in Computer Science:</strong> London Metropolitan University, London, Holloway</p>
+        <ul>
+            <li>AWS re/Start Cloud Computing Program - Waes Pimlico Centre</li>
+            <li>Technical Support Fundamentals - Coursera Google</li>
+            <li>System Administration and IT Infrastructure Services - Coursera Google</li>
+        </ul>
+    </section>
+
+        <!-- Visitor Counter Section -->
+
+
+
+    </section> 
+    <section id="visitor-counter">
+        <h2>Visitor Counter</h2>
+        <!-- Placeholder for visitor count -->
+        <p id="visitor-count">Loading...</p>  
+    </section>
+ <script>
+        async function getVisitorCount() {
+    try {
+        const response = await fetch('https://e6pwbtsdmj.execute-api.us-west-2.amazonaws.com/VisitorCounterFunction');
+        if (!response.ok) throw new Error('Failed to fetch visitor count');
+        const data = await response.json();
+        document.getElementById('visitor-count').innerText = `Visitor Count: ${data.visitCount}`;
+    } catch (error) {
+        console.error('Error fetching visitor count:', error);
+        document.getElementById('visitor-count').innerText = 'Error fetching visitor count';
+    }
+}
+window.onload = getVisitorCount;
+
+    </script>
+    
+
+</body>
+</html>
